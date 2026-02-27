@@ -27,7 +27,7 @@ export function HomePage() {
     <div className="min-h-screen font-[Plus_Jakarta_Sans,sans-serif]">
       <section
         id="inicio"
-        className="relative isolate flex min-h-[420px] h-[50vh] items-center justify-center overflow-hidden px-6 text-white"
+        className="relative isolate flex min-h-[620px] h-[75vh] items-center justify-center overflow-hidden px-6 text-white"
       >
         <video
           className="absolute inset-0 -z-20 h-full w-full object-cover"
@@ -49,24 +49,39 @@ export function HomePage() {
 
         <div className="mx-auto w-full max-w-3xl text-center">
           <div className="glass-card mx-auto max-w-2xl border-white/30 bg-white/12 px-6 py-8">
-          <m.h1
-            initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: shouldReduceMotion ? 0 : 0.45 }}
-            className="text-balance text-4xl font-semibold sm:text-6xl"
-          >
-            Escaneie e ganhe sua squeeze
-          </m.h1>
-          <m.p
-            initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: shouldReduceMotion ? 0 : 0.45, delay: shouldReduceMotion ? 0 : 0.08 }}
-            className="mx-auto mt-4 max-w-xl text-lg text-white/85"
-          >
-            Bonafide Seguros, sua saude em 1o lugar.
-          </m.p>
+            <m.h1
+              initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: shouldReduceMotion ? 0 : 0.45 }}
+              className="text-balance text-4xl font-semibold sm:text-6xl"
+            >
+              Escaneie e ganhe sua squeeze
+            </m.h1>
+            <m.p
+              initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: shouldReduceMotion ? 0 : 0.45, delay: shouldReduceMotion ? 0 : 0.08 }}
+              className="mx-auto mt-4 max-w-xl text-lg text-white/85"
+            >
+              Sua saúde em primeiro lugar.
+            </m.p>
+            <a
+              href="#cadastro"
+              className="btn-primary mx-auto mt-6 inline-flex w-auto items-center justify-center px-8"
+            >
+              Ir para cadastro
+            </a>
           </div>
         </div>
+
+        <a
+          href="#como-funciona"
+          className="scroll-indicator absolute bottom-5 left-1/2 -translate-x-1/2"
+          aria-label="Rolar para a próxima seção"
+        >
+          <span className="scroll-indicator__mouse" />
+          <span className="scroll-indicator__text">Role para baixo</span>
+        </a>
       </section>
 
       <section id="como-funciona" className="bg-white px-6 py-20 text-slate-900">
@@ -86,6 +101,11 @@ export function HomePage() {
         <div className="mx-auto w-full max-w-2xl">
           <h2 className="mb-5 text-center text-3xl font-semibold">Faca seu cadastro</h2>
           <LeadForm onSubmit={handleSubmit} />
+          <img
+            src="/assets/Logo-Fundo transparente branco.png"
+            alt="Bonafide Seguros"
+            className="mx-auto mt-10 h-16 w-auto object-contain opacity-95 sm:h-20"
+          />
           <p className="mt-10 text-center text-xs leading-relaxed text-white/70">
             BONAFIDE - CORRETORA DE SEGUROS LTDA | CNPJ 28.914.268/0001-58 | Rua Barao de Teffe, 633,
             Jundiai - SP.

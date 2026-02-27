@@ -1,4 +1,4 @@
-import { CheckCircle, InstagramLogo } from '@phosphor-icons/react'
+import { CheckCircle, InstagramLogo, WhatsappLogo } from '@phosphor-icons/react'
 import { m, useReducedMotion } from 'framer-motion'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { AppShell } from '../components/AppShell'
@@ -55,6 +55,16 @@ export function SuccessPage() {
           >
             <InstagramLogo size={20} weight="duotone" />
             Siga nosso Instagram
+          </a>
+
+          <a
+            href="https://api.whatsapp.com/send/?phone=11976750119&text=Ol%C3%A1%2C+Tudo+Bem%3F+gostaria+de+saber+mais+sobre%3A+&type=phone_number&app_absent=0"
+            target="_blank"
+            rel="noreferrer"
+            className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-2xl border border-white/30 bg-white/10 px-4 py-3 font-semibold text-white transition hover:bg-white/20"
+          >
+            <WhatsappLogo size={20} weight="duotone" />
+            Chamar no WhatsApp
           </a>
 
           <button

@@ -45,6 +45,11 @@ export function AppShell({ children, showVideo = false }: AppShellProps) {
         <main className="flex-1">{children}</main>
 
         <footer className="mt-10 text-center text-xs leading-relaxed text-white/60">
+          <img
+            src="/assets/Logo-Fundo transparente branco.png"
+            alt="Bonafide Seguros"
+            className="mx-auto mb-3 h-12 w-auto object-contain opacity-95 sm:h-14"
+          />
           BONAFIDE - CORRETORA DE SEGUROS LTDA | CNPJ 28.914.268/0001-58 | Rua Barao de Teffe, 633,
           Jundiai - SP.
         </footer>

@@ -44,9 +44,15 @@ export function HowItWorks({ variant = 'dark' }: HowItWorksProps) {
             }}
             className={
               isLight
-                ? 'rounded-3xl border border-slate-200 bg-white p-6 shadow-xl shadow-blue-500/10'
+                ? 'step-card-light rounded-3xl border border-slate-200 bg-white p-6 shadow-xl shadow-blue-500/10'
                 : 'glass-card'
             }
+            whileHover={
+              isLight && !shouldReduceMotion
+                ? { y: -8, rotateX: -4, rotateY: 3, scale: 1.015 }
+                : undefined
+            }
+            style={isLight ? { transformStyle: 'preserve-3d' } : undefined}
           >
             <Icon
               size={36}
